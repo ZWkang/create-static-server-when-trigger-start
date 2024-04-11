@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "cac": "^6.7.14",
     "vue": "^3.4.21"
   },
   "devDependencies": {

@@ -34,14 +34,22 @@
     "lint:fix": "eslint . --fix",
     "test": "vitest",
     "build": "tsup",
-    "start": "tsx src/index.ts",
+    "start": "cd front-end && pnpm i && pnpm build && cd .. && tsx src/server",
     "release": "pnpm publish",
     "bump:version": "bumpp",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
+    "@types/ws": "^8.5.10",
+    "cac": "^6.7.14",
+    "chokidar": "^3.6.0",
+    "fast-glob": "^3.3.2",
+    "h3": "^1.11.1",
+    "mrmime": "^2.0.0",
+    "open": "^10.1.0",
     "picocolors": "^1.0.0",
+    "ws": "^8.16.0",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
