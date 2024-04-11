@@ -1,0 +1,61 @@
+{
+  "name": "pkg-name",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@8.11.0",
+  "description": "> description:",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "zwkang",
+    "email": "kang95630@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zwkang/pkg-name.git"
+  },
+  "bugs": "https://github.com/zwkang/pkg-name/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "pkg-name": "bin/pkg-name.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsup --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "vitest",
+    "build": "tsup",
+    "start": "tsx src/index.ts",
+    "release": "pnpm publish",
+    "bump:version": "bumpp",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build"
+  },
+  "dependencies": {
+    "picocolors": "^1.0.0",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.1.2",
+    "@types/node": "^20.10.1",
+    "@types/yargs": "^17.0.32",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "bumpp": "^9.2.0",
+    "eslint": "^8.54.0",
+    "prettier": "^3.1.0",
+    "tsup": "^8.0.1",
+    "tsx": "^4.6.1",
+    "typescript": "^5.3.2",
+    "vitest": "^0.34.6"
+  }
+}
